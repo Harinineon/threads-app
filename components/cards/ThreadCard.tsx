@@ -141,6 +141,8 @@ function ThreadCard({
               {comments.length} repl{comments.length > 1 ? "ies" : "y"}
             </p>
           </Link>
+
+          
         </div>
       )}
 
@@ -150,8 +152,7 @@ function ThreadCard({
           className='mt-5 flex items-center'
         >
           <p className='text-subtle-medium text-gray-1'>
-            {formatDateString(createdAt)}
-            {community && ` - ${community.name} Community`}
+            {community && ` ${community.name} Community`}
           </p>
 
           <Image
@@ -163,6 +164,11 @@ function ThreadCard({
           />
         </Link>
       )}
+      <div>
+          <p className='text-subtle-medium text-gray-1 mt-5'>
+            {formatDateString(createdAt)}
+          </p>
+          </div>
     </article>
   );
 }
